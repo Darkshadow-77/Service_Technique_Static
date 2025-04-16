@@ -1,0 +1,1 @@
+# Service_Technique_Static
