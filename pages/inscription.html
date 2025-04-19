@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - T-Service</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<!-- Header statique -->
+<header class="bar_nav">
+    <div class="logo_site">
+        <img src="../img/logo.jpeg" alt="T-Service" class="logo">
+        <div class="titre_site"><h1 class="titre">T-Service</h1></div>
+    </div>
+    <nav class="contenu_nav">
+        <ul class="liens_nav">
+            <li><a href="../index.html" class="lien">Accueil</a></li>
+            <li><a href="a_propos.html" class="lien">A propos</a></li>
+            <li><a href="services.html" class="lien">Services</a></li>
+            <li><a href="contact.html" class="lien">Contact</a></li>
+            <li><a href="publications_liste.html" class="lien">Publications</a></li>
+        </ul>
+        <button class="btn_cta"><a href="inscription.html">Commencer</a></button>
+    </nav>
+</header>
+
+<main class="ins_pcp_box">
+    <form action="./traitements/traitement.php" method="post" class="ins_form">
+        <div>
+            <label for="prenom">Nom :</label><br>
+            <input type="text" name="surname" id="nom" class="field" oninput="this.value = this.value.toUpperCase();" required placeholder="DUPONT"><br>  
+        </div>
+        <div>
+            <label for="prenom">Prenom :</label><br>
+            <input type="text" name="firstname" id="prenom" class="field" oninput="capitalizeFirstLetter(this)" required placeholder="Albert"><br>
+        </div>
+        <div>
+            <label for="email">Email :</label><br>
+            <input type="email" name="email" id="email" class="field" required placeholder="Albertdupont90@gmail.com"><br>
+        </div>
+        <div>
+            <label for="password">Mot de passe :</label><br>
+            <div class="pass">
+                <input type="password" name="password" id="password" class="field" required>
+                <i class="fa-solid fa-eye eye" onclick="togglePassword()"></i>
+            </div>
+        </div>
+        <div>
+            <label for="domain">Domaine :</label><br>
+            <select name="domain" id="domain" class="field" required>
+                <option value="Assistance Technique">Assistance Technique/Informatique</option>
+                <option value="Service Réseau">Services Réseaux</option>
+                <option value="Service Automobile">Service Automobile</option>
+                <option value="Particulier">Particulier</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn_sub">S'inscrire</button>
+
+        <!-- Message d'erreur ici si besoin, à ajouter dynamiquement -->
+        <!-- <p style="color: red;">Erreur ici si besoin...</p> -->
+    </form>
+
+    <div class="log_or_sign">
+        <p>Déjà inscrit ?</p>
+        <a href="connexion.html">Se connecter</a>
+    </div>
+</main>
+
+<!-- Footer statique -->
+<footer class="foot">
+    <div class="reseaux_sociaux">
+        <a href="#" class="lien_reseau"><i class="fa-brands fa-facebook icon"></i></a>
+        <a href="#" class="lien_reseau"><i class="fa-brands fa-twitter icon"></i></a>
+        <a href="#" class="lien_reseau"><i class="fa-brands fa-square-instagram icon"></i></a>
+    </div>
+    <p class="txt_foot">© 2023 T-Service. Tous droits réservés.</p>
+</footer>
+
+<script>
+function capitalizeFirstLetter(input) {
+    const value = input.value;
+    input.value = value.charAt(0).toUpperCase() + value.slice(1).toLowerCase();
+}
+
+function togglePassword() {
+    const passwordField = document.getElementById("password");
+    const eyeIcon = document.querySelector(".fa-solid");
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordField.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
+}
+</script>
+
+</body>
+</html>
