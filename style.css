@@ -607,21 +607,23 @@ body {
 /* Style spécifique pour la page de publication */
 
 /* Formulaire de publication */
-form {
+.pub_form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f8f8f8;
+    background:linear-gradient(135deg ,#1e00ff,#0059ff,#009dff,#00eaff) ;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-form input[type="text"],
-form textarea,
-form input[type="file"] {
+
+
+.pub_form input[type="text"],
+.pub_form textarea,
+.pub_form input[type="file"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -660,30 +662,94 @@ form input[type="file"] {
 }
 
 /* Liste des publications */
-section > div {
+
+.main_pub_ctn{ 
+    text-align: center;
+    background-color: #f9f9f9;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main_pub_ctn h1{ 
+    color: #007BFF;
+    font-size:42px;
+    margin: 10px;
+}
+
+
+.list_content {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-around;
+}
+.publi_liste > div {
     margin-bottom: 30px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 20px;
 }
 
-section h2 {
+.publi_liste h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #007BFF;
 }
 
-section img {
+.pub{
+    max-width: 300px;
+    height: fit-content;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+.pub:hover{
+    cursor: pointer;
+}
+
+.pub h3 {
+    color: red;
+}
+
+.publi_liste img {
     max-width: 300px;
     margin-top: 15px;
 }
 
-section p {
+.publi_liste p {
     font-size: 16px;
     line-height: 1.5;
     color: #333;
 }
 
-section em {
+.publi_liste em {
     color: #666;
     font-size: 14px;
+}
+
+
+.invit_a_publi {
+    background: linear-gradient(45deg, rgb(17, 116, 255), rgb(255, 12, 12));
+    padding: 20px;
+    margin: 30px auto;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 600px;
+}
+
+.invit h2 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.invit a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.invit a:hover {
+    text-decoration: underline;
 }

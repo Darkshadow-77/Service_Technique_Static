@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publications - T-Service</title>
+    <title>Connexion - T-Service</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -27,41 +27,30 @@
     </nav>
 </header>
 
-<main class="main_pub_ctn">
-    <h1>📰 Nos Publications</h1>
-    <p>Découvrez nos dernières publications sur les services que nous proposons.</p>
-
-    <section class="invit_a_publi">
-        <div class="invit">
-            <h2>Vous pouvez publier vous-même ici 👉 <a href="publication.html">Publier</a></h2>
+<main class="ins_pcp_box">
+    <form action="./traitements/traitement3.html" method="post" class="ins_form">
+        <div>
+            <label for="email">Email :</label><br>
+            <input type="email" name="email" id="email" class="field" required placeholder="votremail@exemple.com"><br>
         </div>
-    </section>
-
-    <section class="publi_liste">
-        <h2>📋 Dernières publications</h2>
-        <div class="list_content">
-        <div class="pub">
-            <h3>Assistance Ordinateur Portable</h3>
-            <img src="../img/publication1.png" alt="Image" style="width: 300px;"><br>
-            <p>Dépannage rapide d’ordinateurs portables : nettoyage, remplacement disque dur, réinstallation système.</p>
-            <p><em>Publié le : 16 avril 2025, 10:15</em></p>
+        <div>
+            <label for="password">Mot de passe :</label><br>
+            <div class="pass">
+                <input type="password" name="password" id="password" class="field" required>
+                <i class="fa-solid fa-eye eye" onclick="togglePassword()"></i>
+            </div>
         </div>
 
-        <div class="pub">
-            <h3>Installation Réseau PME</h3>
-            <img src="../img/publication2.png" alt="Image" style="width: 300px;"><br>
-            <p>Mise en place complète d’un réseau d’entreprise sécurisé avec routeur, switch, câblage et serveur NAS.</p>
-            <p><em>Publié le : 15 avril 2025, 17:45</em></p>
-        </div>
+        <button type="submit" class="btn_sub">Se connecter</button>
 
-        <div class="pub">
-            <h3>Diagnostic Moteur Électronique</h3>
-            <img src="../img/publication3.png" alt="Image" style="width: 300px;"><br>
-            <p>Utilisation d’outils OBD2 pour détecter les défauts moteur et améliorer la performance des véhicules.</p>
-            <p><em>Publié le : 14 avril 2025, 14:30</em></p>
-        </div>
+        <!-- Message d’erreur simulé pour la démo -->
+        <!-- <p style="color: red;">Email ou mot de passe incorrect</p> -->
+    </form>
+
+    <div class="log_or_sign">
+        <p>Pas encore inscrit ?</p>
+        <a href="inscription.html">Créer un compte</a>
     </div>
-    </section>
 </main>
 
 <!-- Footer statique -->
@@ -71,8 +60,24 @@
         <a href="#" class="lien_reseau"><i class="fa-brands fa-twitter icon"></i></a>
         <a href="#" class="lien_reseau"><i class="fa-brands fa-square-instagram icon"></i></a>
     </div>
-    <p class="txt_foot">© 2023 T-Service. Tous droits réservés.</p>
+    <p class="txt_foot">© 2025 T-Service. Tous droits réservés.</p>
 </footer>
+
+<script>
+function togglePassword() {
+    const passwordField = document.getElementById("password");
+    const eyeIcon = document.querySelector(".fa-solid");
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        eyeIcon.classList.remove("fa-eye");
+        eyeIcon.classList.add("fa-eye-slash");
+    } else {
+        passwordField.type = "password";
+        eyeIcon.classList.remove("fa-eye-slash");
+        eyeIcon.classList.add("fa-eye");
+    }
+}
+</script>
 
 </body>
 </html>

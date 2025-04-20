@@ -1,62 +1,75 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion - T-Service</title>
+    <title>Contact - Service Technique</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <?php require_once(__DIR__."/page_components/header.php") ?>
-    
-    <main class="ins_pcp_box">
-        <form action="./traitements/traitement3.php" method="post" class="ins_form">
-            <div>
-                <label for="email">Email :</label><br>
-                <input type="email" name="email" id="email" class="field" required placeholder="votremail@exemple.com"><br>
-            </div>
-            <div>
-                <label for="password">Mot de passe :</label><br>
-                <div class="pass">
-                    <input type="password" name="password" id="password" class="field" required>
-                    <i class="fa-solid fa-eye eye" onclick="togglePassword()"></i>
+
+<!-- Header statique -->
+<header class="bar_nav">
+    <div class="logo_site">
+        <img src="../img/logo.jpeg" alt="T-Service" class="logo">
+        <div class="titre_site"><h1 class="titre">T-Service</h1></div>
+    </div>
+    <nav class="contenu_nav">
+        <ul class="liens_nav">
+            <li><a href="../index.html" class="lien">Accueil</a></li>
+            <li><a href="a_propos.html" class="lien">À propos</a></li>
+            <li><a href="services.html" class="lien">Services</a></li>
+            <li><a href="contact.html" class="lien">Contact</a></li>
+            <li><a href="publications_liste.html" class="lien">Publications</a></li>
+        </ul>
+        <button class="btn_cta"><a href="inscription.html">Commencer</a></button>
+    </nav>
+</header>
+
+<main class="ctn_main">
+    <div class="container_contact">
+
+        <section class="form_message">
+            <h2>Laissez-nous un message</h2>
+            <form action="./traitements/traitement1.html" method="post">
+                <div class="form_group">
+                    <label for="name">Nom</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </div>
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form_group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form_group">
+                    <button type="submit" class="btn_send_message">Envoyer</button>
+                </div>
+            </form>
+        </section>
 
-            <button type="submit" class="btn_sub">Se connecter</button>
+        <section class="info_entreprise">
+            <h2>Autres canaux de contact</h2>
+            <p>Vous pouvez toujours nous joindre via nos coordonnées ci-dessous.</p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong>Adresse:</strong> 123 Rue des Services, 75000 Lomé, Togo</p>
+            <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> contact@servicetech.com</p>
+            <p><i class="fa-solid fa-phone"></i> <strong>Téléphone:</strong> +228 93 14 65 65</p>
+        </section>
 
-            <?php
-            if (isset($_SESSION['erreur'])) {
-                echo "<p style='color: red;'>" . $_SESSION['erreur'] . "</p>";
-                unset($_SESSION['erreur']);
-            }
-            ?>
-        </form>
+    </div>
+</main>
 
-        <div class="log_or_sign">
-            <p>Pas encore inscrit ?</p>
-            <a href="inscription.php">Créer un compte</a>
-        </div>
-    </main>
-
-    <?php require_once(__DIR__."/page_components/footer.php") ?>
+<!-- Footer statique -->
+<footer class="foot">
+    <div class="reseaux_sociaux">
+        <a href="#" class="lien_reseau"><i class="fa-brands fa-facebook icon"></i></a>
+        <a href="#" class="lien_reseau"><i class="fa-brands fa-twitter icon"></i></a>
+        <a href="#" class="lien_reseau"><i class="fa-brands fa-square-instagram icon"></i></a>
+    </div>
+    <p class="txt_foot">© 2025 T-Service. Tous droits réservés.</p>
+</footer>
 </body>
-
-<script>
-function togglePassword() {
-    const passwordField = document.getElementById("password");
-    const eyeIcon = document.querySelector(".fa-solid");
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        eyeIcon.classList.remove("fa-eye");
-        eyeIcon.classList.add("fa-eye-slash");
-    } else {
-        passwordField.type = "password";
-        eyeIcon.classList.remove("fa-eye-slash");
-        eyeIcon.classList.add("fa-eye");
-    }
-}
-</script>
 </html>
