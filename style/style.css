@@ -446,7 +446,7 @@ a {
     border-radius: 8px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url("img/form_font.png");
+    background-image: url("../img/form_font.png");
     background-size: contain;
     background-position: center;
 }
