@@ -4,6 +4,10 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 /* Barre de navigation */
 .bar_nav {
     display: flex;
@@ -17,7 +21,7 @@ body {
 
 .logo_site {
     display: flex;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #007BFF;
 }
@@ -37,7 +41,7 @@ body {
 }
 
 .titre_site{
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #007BFF;
     margin-left: 10px;
     font-weight: bold;
@@ -87,23 +91,32 @@ body {
     background-color: darkred;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+}
+
 /* Section principale */
 .accueil {
     padding-top: 30px;
     padding-left: 50px;
     height: 500px;
-    background-image: url("img/fond_acceuil.jpeg");
+    background-image: url("../img/fond_acceuil.jpeg");
     background-position: center;
 }
 
 .titre_princ {
-    font-size: 36px;
+    font-size: 2.25rem;
     color: red;
     margin-bottom: 20px;
 }
 
 .titre_acceuil {
-    font-size: 72px;
+    font-size: 4.5rem;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #007BFF;
     margin-bottom: 20px;
@@ -111,7 +124,7 @@ body {
 
 .txt_princ {
    color: white;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     text-wrap: wrap;
 }
@@ -120,7 +133,7 @@ body {
     background-color: #007BFF;
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -150,14 +163,14 @@ body {
 }
 
 .titre_des{
-    font-size: 36px;
+    font-size: 2.25rem;
     color: red;
 }
 
 .des_box{
     width: 50%;
     text-wrap: wrap;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     z-index: 2;
@@ -183,7 +196,7 @@ body {
 }
 
 .titre_contact{
-    font-size: 36px;
+    font-size: 2.25rem;
     color: #1d8aff;
 }
 
@@ -205,16 +218,17 @@ body {
     justify-content: space-evenly;
 }
 .srv_box{
-    width: 300px;
-    height: 450px;
+    width: 30%;
+    height: fit-content;
     border: 1px solid blue;
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
+    padding-bottom: 20px;
 }
 .nom_service{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .srv_img{
@@ -243,7 +257,7 @@ body {
 .icon {
     text-decoration: none;
     color: #333;
-    font-size: 50px;
+    font-size: 3.125rem;
     transition: color 0.3s;
 }
 .icon:hover {
@@ -300,7 +314,7 @@ body {
     position: relative;
     left: -90px;
     display: block;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-weight: bold;
     color: rgb(255, 58, 58);
     font-family: 'Courier New', Courier, monospace;
@@ -317,7 +331,7 @@ body {
     padding: 10px 20px;
     background-color: red;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
+    font-size: 1rem;
     border: none;
     color: white;
     border-radius: 10px;
@@ -325,7 +339,7 @@ body {
     margin-top: 20px;
 }
 .des_srv{
-    font-size: 19px;
+    font-size: 1.1875rem;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -355,7 +369,7 @@ body {
 }
 
 .ins_form label{
-    font-size: 20px;
+    font-size: 1.25rem;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
@@ -367,7 +381,7 @@ body {
     border: none;
     border-bottom: 2px solid white;
     background-color: #a0ccfc4a;
-    font-size: 19px;
+    font-size: 1.1875rem;
     font-family: 'Courier New', sans-serif;
     padding-inline: 10px;
     color: white;

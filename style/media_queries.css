@@ -1,0 +1,144 @@
+@media screen and (max-width: 1085px) {
+    /*Accueil*/
+    .description, .contact{
+        height: 360px;
+        padding-inline: 20px;
+    }
+
+    .titre_des ,.titre_contact{
+        font-size: 2rem;
+    }
+
+    .text_des ,.text_contact{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    /* header */
+
+    .titre{
+       font-size: 36px;
+       margin-block: 30px;
+    }
+
+    .menu-toggle {
+        display: block;
+        background-color: #333;
+    }
+
+    .liens_nav{
+        width: 0px;
+        overflow: hidden;
+    }
+    .liens_nav.active {
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0px;
+        transition: width 0.5s ease-in-out;
+        width: 200px;
+        background-color: white;
+        border: 1px solid #333;
+        padding: 20px;
+        gap: 30px;
+        border-radius: 0px 20px 20px 0px;
+        text-align: end;
+    }
+
+    .liens_nav.active li{
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        border-bottom: 1px solid #1f75ff;
+    }
+
+    .lien:hover{
+        color: #fa1a1a;
+    }
+
+    .lien:hover::after{
+        content: "➡️";
+    }
+
+    /*Accueil*/
+    
+    .description, .contact{
+        width: 90%;
+        padding-inline: 20px;
+    }
+
+    .description{
+        padding-bottom: 20px;
+        height: fit-content;
+    }
+
+    .titre_des ,.titre_contact{
+        font-size: 2rem;
+    }
+
+    .text_des ,.text_contact{
+        font-size: 1rem;
+    }
+
+    .img_des{
+        height: 80%;
+        top: 60px;
+        left: 0px;
+    }
+    .img_contact{
+        height: 80%;
+        top: 50px;
+        right: 0px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .img_des, .img_contact{
+        display: none;
+    }
+
+    .description, .contact{
+        width: 100%;
+        padding: 0px;
+        padding-block: 30px;
+        text-align: center;
+    }
+
+    .titre_des ,.titre_contact,.des_box{
+        width: 90%;
+    }
+    .text_des ,.text_contact{
+       width: 90%;
+       padding: 10px;
+    }
+}
+
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 480px) {
+    .titre{
+        display: none;
+     }
+    .description, .contact{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+        padding-block: 30px;
+        text-align: center;
+        border-radius: 0px;
+    }
+    .titre_des ,.titre_contact,.des_box{
+        width: 100%;
+    }
+    .srv_pcp_box{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .srv_box{
+        width: 90%;
+    }
+}

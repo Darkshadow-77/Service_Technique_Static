@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil - T-Services</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="style/media_queries.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="bar_nav">
@@ -16,6 +18,7 @@
             </div>
         </div>
         <nav class="contenu_nav">
+            <button class="menu-toggle">☰</button>
             <ul class="liens_nav">
                 <li><a href="index.html" class="lien">Accueil</a></li>
                 <li><a href="pages/a_propos.html" class="lien">A propos</a></li>
@@ -23,7 +26,7 @@
                 <li><a href="pages/contact.html" class="lien">Contact</a></li>
                 <li><a href="pages/publications_liste.html" class="lien">Publications</a></li>
             </ul>
-            <button class="btn_cta"><a href="pages/inscription.html">Commencer</a></button>
+            <a href="pages/inscription.html" class="btn_cta"><i class="fa-solid fa-right-to-bracket"></i></a>
         </nav>
     </header>
 
@@ -31,7 +34,7 @@
         <section class="accueil">
             <h1 class="titre_princ">Bienvenue sur <br><span class="titre_acceuil">T-Service</span></h1>
             <p class="txt_princ">Votre service Technique Informatique,<br> Réseaux et Automobile disponible h24</p>
-            <button class="btn_dec_pls">Découvrir plus</button>
+            <a href="pages/a_propos.html" class="btn_dec_pls">Découvrir plus</a>
         </section>
 
         <section class="description" id="a_propos">
@@ -42,18 +45,19 @@
                 </p>
             </div>
             <img src="img/fond_description.jpeg" alt="Description" class="img_des">
-            <button class="btn_cta">À propos de nous</button>
+            <a href="pages/a_propos.html" class="btn_cta">A porpos de nous</a>
         </section>
 
         <section class="contact">
-            <h2 class="titre_contact">Besoin d’aide ? Une question ? <br> Un avis à partager ?</h2>
+            <h2 class="titre_contact">Besoin d’aide ? <br>Une question ? Un avis à partager ?</h2>
             <div class="des_box">
                 <p class="text_contact">
                     Chez T-Service, votre satisfaction est notre priorité ! Que ce soit pour une assistance technique, un conseil, une demande d’intervention ou simplement pour partager votre avis, nous sommes à votre écoute.
                 </p>
             </div>
+            <a class="btn_dec_pls" href="pages/contact.html">Contactez-nous</a>
             <img src="img/fond_contact.jpeg" alt="Contact" class="img_contact">
-            <button class="btn_dec_pls">Contactez-nous</button>
+
         </section>
 
         <section class="services">
@@ -62,17 +66,17 @@
                 <div class="srv_box">
                     <img src="img/auto_service.jpeg" alt="Service Automobile" class="srv_img">
                     <p class="nom_service">Service Automobile</p>
-                    <a href="#"><button class="visit">Visiter</button></a>
+                    <a href="pages/services.html#srv_auto"><button class="visit">Visiter</button></a>
                 </div>
                 <div class="srv_box">
                     <img src="img/assistance_service.jpeg" alt="Assistance technique" class="srv_img">
                     <p class="nom_service">Assistance technique</p>
-                    <a href="#"><button class="visit">Visiter</button></a>
+                    <a href="pages/services.html#ass_tech"><button class="visit">Visiter</button></a>
                 </div>
                 <div class="srv_box">
                     <img src="img/network_service.jpeg" alt="Service Réseaux" class="srv_img">
                     <p class="nom_service">Services Réseaux</p>
-                    <a href="#"><button class="visit">Visiter</button></a>
+                    <a href="pages/services.html#srv_net"><button class="visit">Visiter</button></a>
                 </div>
             </div>
         </section>
@@ -82,7 +86,8 @@
         <div class="reseaux_sociaux">
             <a href="#" class="lien_reseau"><i class="fa-brands fa-facebook icon"></i></a>
             <a href="#" class="lien_reseau"><i class="fa-brands fa-twitter icon"></i></a>
-            <a href="#" class="lien_reseau"><i class="fa-brands fa-square-instagram icon"></i></a>
+            <a href="#" class="lien_reseau"><i class="fa-brands fa-linkedin icon"></i></a>
+            <a href="#" class="lien_reseau"><i class="fa-brands fa-github icon"></i></a>
         </div>
         <p class="txt_foot">© 2023 T-Service. Tous droits réservés.</p>
     </footer>
