@@ -12,8 +12,27 @@
     .text_des ,.text_contact{
         font-size: 1.1rem;
     }
+    /* services page*/
+    .srv_pr_bcp{
+        position: relative;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: fit-content;
+    }
 
+
+    .srv_des_box{
+        position: absolute;
+        width: 88%;
+        height: fit-content;
+        background: linear-gradient(45deg, rgba(17, 116, 255, 0.826), rgba(255, 12, 12, 0.826));
+        padding: 0px 10px 20px 10px;
+    }
 }
+
+
+
+
 
 @media screen and (max-width: 768px) {
     /* header */
@@ -25,7 +44,7 @@
 
     .menu-toggle {
         display: block;
-        background-color: #333;
+        background:linear-gradient(45deg, #2b83ff, #0cb6ff,#20e9ff);
     }
 
     .liens_nav{
@@ -35,7 +54,7 @@
     .liens_nav.active {
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 150px;
         left: 0px;
         transition: width 0.5s ease-in-out;
         width: 200px;
@@ -45,6 +64,7 @@
         gap: 30px;
         border-radius: 0px 20px 20px 0px;
         text-align: end;
+        z-index:99 ;
     }
 
     .liens_nav.active li{
@@ -91,6 +111,17 @@
         top: 50px;
         right: 0px;
     }
+    /* services page*/
+    .tre_pg_srv span{
+        font-size: 2.5rem;
+    }
+    .srv_des_box{
+        border-color: #ff3b3b;
+        background: linear-gradient(180deg,transparent, rgba(255, 12, 12, 0.826) ,rgba(17, 116, 255, 0.826));
+    }
+    .tre_srv{
+        color: black;   
+     }
 }
 
 @media screen and (max-width: 650px) {
@@ -111,6 +142,30 @@
     .text_des ,.text_contact{
        width: 90%;
        padding: 10px;
+    }
+    /* services page*/
+    .img_srv{
+        display: none;
+    }
+    .srv_des_box{
+        border-left: none;
+        position: relative;
+        background: none;
+    }
+
+    .srv_pr_bcp{
+        background-image: url(../img/srv_default_bkg.png);
+        background-size: cover;
+    }
+
+    .apply{
+        background-color: #fa1a1a;
+    }
+
+    .tre_srv{
+        left: 0px;
+        font-size: 2.5rem;
+        color: #11c4ff;
     }
 }
 

@@ -298,7 +298,7 @@ a {
     margin-block: 30px;
     border-top: 1px solid #ccc;
     border-bottom: 5px solid rgb(17, 116, 255);
-    background: linear-gradient(45deg, rgb(17, 116, 255), rgb(255, 12, 12));
+    background-image: url("../img/srv_default_bkg.png");
 }
 .img_srv{
     height: 100%;
@@ -316,14 +316,13 @@ a {
     display: block;
     font-size: 3.125rem;
     font-weight: bold;
-    color: rgb(255, 58, 58);
+    color: #11c4ff;
     font-family: 'Courier New', Courier, monospace;
     width: fit-content;
     height: fit-content;
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
     border-radius: 0px 20px 20px 0px;
-    /*text-decoration: underline rgb(17, 116, 255);*/
     padding: 10px 20px;
 }
 
@@ -697,6 +696,7 @@ form input[type="file"] {
     flex-direction: row;
     gap: 20px;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 .publi_liste > div {
     margin-bottom: 30px;
