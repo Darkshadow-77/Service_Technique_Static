@@ -454,6 +454,8 @@ a {
 .info_entreprise {
     margin-bottom: 40px;
     background-color: white;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 .info_entreprise h2 {
