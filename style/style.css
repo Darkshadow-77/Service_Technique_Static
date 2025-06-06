@@ -442,12 +442,8 @@ a {
     max-width: 900px;
     margin: 30px auto;
     padding: 20px;
-    border-radius: 8px;
-    background-color: white;
+    border-radius: 8px; background:linear-gradient(135deg ,#1e00ff,#0059ff,#009dff,#00eaff) ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-image: url("../img/form_font.png");
-    background-size: contain;
-    background-position: center;
 }
 
 .container_contact h2{
